@@ -1,0 +1,61 @@
+name: filmtrace_hk
+description: "港片映迹 FilmTrace HK - 電影取景地 LBS 打卡 App"
+publish_to: 'none'
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.2.0 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+  flutter_localizations:
+    sdk: flutter
+
+  # 状态管理（Sprint 1 先用 Riverpod，GoRouter Sprint 3 詳情頁再用）
+  flutter_riverpod: ^2.4.9
+
+  # 路由（預留）
+  go_router: ^13.0.0
+
+  # Firebase
+  firebase_core: ^2.24.2
+  firebase_auth: ^4.16.0
+  cloud_firestore: ^4.17.5
+  firebase_storage: ^11.6.5
+
+  # UI & 图标
+  flutter_svg: ^2.0.9
+
+  # Sprint 2: 地图 + LBS
+  mapbox_maps_flutter: ^2.18.0
+  geolocator: ^11.0.0
+  permission_handler: ^11.3.0
+  url_launcher: ^6.2.0
+
+  # 阶段 4: AR 相机
+  camera: ^0.10.5+9
+  path_provider: ^2.1.2
+
+  # 阶段 5: 拍立得合成、保存与分享
+  image: ^4.0.0
+  image_gallery_saver: ^2.0.3
+  share_plus: ^10.0.0
+
+  # Phase 3: 数据层标准化（不可变模型 + JSON）
+  freezed_annotation: ^2.4.1
+  json_annotation: ^4.8.1
+
+flutter:
+  uses-material-design: true
+  assets:
+    - assets/icons/
+    - assets/stills/
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^3.0.1
+  build_runner: ^2.4.8
+  freezed: ^2.4.6
+  json_serializable: ^6.7.1
